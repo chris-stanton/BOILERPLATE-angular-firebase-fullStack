@@ -1,12 +1,12 @@
 var app = angular.module("sampleApp", ["firebase"]);
-// controller code
+//controller code
 app.controller("SampleCtrl", function($firebaseAuth, $http) {
 
   var self = this;
 //global variable must have
   var auth = $firebaseAuth();
   var firebaseUser = auth.$getAuth();
-console.log(firebaseUser);
+    console.log(firebaseUser);
 
 //This code runs whenever the user logs in
   self.logIn = function(){
