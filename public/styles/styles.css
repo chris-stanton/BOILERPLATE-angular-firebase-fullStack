@@ -1,0 +1,9 @@
+#authPhoto {
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+}
+
+.authInfo {
+  text-align: right;
+}

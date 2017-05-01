@@ -13,33 +13,38 @@
         <script src="scripts/config.js"></script>
     <!-- Angular Application with Authentication -->
         <script src="scripts/client.js"></script>
+    <!-- Style Sheet -->
+          <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body ng-controller="SampleCtrl as sc">
-    <h1>Hi! Log in to get some secret data from the server!</h1>
-    <button ng-click="sc.logIn()">Log In</button>
-    <button ng-click="sc.logOut()">Log Out</button>
-    <div ng-if="sc.secretData.length === 0">Log in to get some secret data.</div>
-    <table ng-if="sc.secretData.length > 0">
-      <thead>
-        <tr>
-          <th>
-            Secrecy Level
-          </th>
-          <th>
-            Secret Message
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr ng-repeat="secret in sc.secretData">
-          <td>
-            {{secret.secrecy_level}}
-          </td>
-          <td>
-            {{secret.secret_text}}
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div ng-hide="sc.email  === NULL" class="authInfo">
+      <p><img id="authPhoto" ng-src="{{sc.photo}}" alt=""><p> User Name: {{sc.displayName}} </p></p>
+      <p> User Email: {{sc.email}} </p>
+    </div>
+      <h1 ng-show="sc.email === NULL"> Hi! Login to view this page </h1>
+        <button ng-show="sc.email === NULL" ng-click="sc.logIn()">Log In</button>
+        <button ng-show="sc.email !== NULL" ng-click="sc.logOut()">Log Out</button>
+          <table ng-show="sc.email !== NULL">
+            <thead>
+              <tr>
+                <th>
+                  Secrecy Level
+                </th>
+                <th>
+                  Secret Message
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="secret in sc.secretData">
+                <td>
+                  {{secret.secrecy_level}}
+                </td>
+                <td>
+                  {{secret.secret_text}}
+                </td>
+              </tr>
+            </tbody>
+          </table>
   </body>
 </html>

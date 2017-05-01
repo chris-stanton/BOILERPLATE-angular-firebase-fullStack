@@ -1,3 +1,4 @@
+//reguired variable
 var admin = require("firebase-admin");
 
 admin.initializeApp({
@@ -14,18 +15,18 @@ var tokenDecoder = function(req, res, next){
       // Adding the decodedToken to the request so that downstream processes can use it
       req.decodedToken = decodedToken;
       next();
-    })
+    })//end of admin.auth()
     .catch(function(error) {
       // If the id_token isn't right, you end up in this callback function
       // Here we are returning a forbidden error
       console.log('User token could not be verified');
       res.sendStatus(403);
-    });
+    });//end of catch
   } else {
     // Seems to be hit when chrome makes request for map files
     // Will also be hit when user does not send back an idToken in the header
     res.sendStatus(403);
   }
-}
+}//end of var tokenDecoder
 
 module.exports = { token: tokenDecoder };
