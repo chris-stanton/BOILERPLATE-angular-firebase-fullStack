@@ -3,7 +3,7 @@ AngularFire with token authentication on Node backend server. This branch uses t
 
 ## Get Started with nodeFire
 1. Run these commands to add the project locally:
-  ```shell
+  ```
   $ git clone repo or download zip file
   $ cd firebase-template
   $ npm install
@@ -58,14 +58,14 @@ AngularFire with token authentication on Node backend server. This branch uses t
 
     ```sql
     INSERT INTO users (email, clearance_level)
-    VALUES ('lukeschlangen@gmail.com', 5),
+    VALUES ('cstanton0760@yahoo.com', 5),
     ('youremail@gmail.com', 4), --Your Google Email added here
     ('yourotheremail@gmail.com', 2), --Your Other Google Email added here
-    ('luke@primeacademy.io', 3);
+    ('chris@prime.com', 3);
     ```
   Because you have set up google OAuth, you will need to log in with a google account (an email with `@gmail.com` will work great). If you have a second google account, that will make it easy to see the differences for people with differing clearance levels.
 
-8. Run `npm start` to run your application on `localhost:5000`
+8. Run `npm start` or Nodemon `npm test` to run your application on `localhost:5000`
 
 ## Deploying
 This is incredibly tedious the first time, but will automatically deploy your application with every future change. In order to deploy this project publicly, you will likely need to add your service account properties as environment variables. Here is how to do that with Heroku:
