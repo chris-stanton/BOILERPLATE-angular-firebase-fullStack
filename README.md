@@ -4,9 +4,8 @@ AngularFire with token authentication on Node backend server. This branch uses t
 ## Get Started with nodeFire
 1. Run these commands to add the project locally:
   ```shell
-  $ git clone repo
-  $ cd nodeFire
-  $ git checkout sql-authorization
+  $ git clone repo or download zip file
+  $ cd firebase-template
   $ npm install
   ```
 
