@@ -1,9 +1,36 @@
-#authPhoto {
-  height: 30px;
-  width: 30px;
-  border-radius: 20px;
-}
 
-.authInfo {
+
+.buttons {
   text-align: right;
 }
+
+
+/*///////////////////////////
+//       LOGGED OUT        //
+///////////////////////////*/
+
+#loginCeditials {
+  margin-top: 200px;
+  text-align: center;
+  display: ;
+}
+
+#authPhoto {
+  height: 145px;
+  width: 140px;
+  border-radius: 100px;
+}
+
+.logoutHeading {
+  text-align: center;
+}
+
+
+
+
+
+
+
+/*///////////////////////////
+//        LOGGED IN        //
+///////////////////////////*/

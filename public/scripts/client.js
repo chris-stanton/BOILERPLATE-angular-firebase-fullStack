@@ -8,18 +8,18 @@ app.controller("SampleCtrl", function($firebaseAuth, $http) {
   var firebaseUser = auth.$getAuth();
     console.log(firebaseUser);
 
+
+
 //This code runs whenever the user logs in
   self.logIn = function(){
     auth.$signInWithPopup("google").then(function(firebaseUser) {
       console.log("Firebase Authenticated as: ", firebaseUser.user.displayName);
-//displays firebase user's credentials
-      self.displayName = firebaseUser.user.displayName;
-      self.photo = firebaseUser.user.photoURL;
-      self.email = firebaseUser.user.email;
     }).catch(function(error) {
       console.log("Authentication failed: ", error);
     });
   };//end of login()
+
+
 
 //This code runs whenever the user changes authentication states
 //e.g. whevenever the user logs in or logs out
@@ -29,6 +29,7 @@ app.controller("SampleCtrl", function($firebaseAuth, $http) {
 //firebaseUser will be null if not logged in
     if(firebaseUser) {
       self.userIsLoggedIn = true;
+      self.displayName = firebaseUser.displayName;
       self.photo = firebaseUser.photoURL;
       self.email = firebaseUser.email;
 //This is where we make our call to our server
@@ -50,6 +51,7 @@ app.controller("SampleCtrl", function($firebaseAuth, $http) {
       self.userIsLoggedIn = false;
     }
   });//end of auth.$onAuthStateChanged()
+
 
 
 //This code runs when the user logs out
