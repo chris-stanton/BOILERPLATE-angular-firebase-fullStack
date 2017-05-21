@@ -28,6 +28,9 @@ app.controller("SampleCtrl", function($firebaseAuth, $http) {
   auth.$onAuthStateChanged(function(firebaseUser){
 //firebaseUser will be null if not logged in
     if(firebaseUser) {
+      self.userIsLoggedIn = true;
+      self.photo = firebaseUser.photoURL;
+      self.email = firebaseUser.email;
 //This is where we make our call to our server
       firebaseUser.getToken().then(function(idToken){
         $http({
@@ -37,14 +40,17 @@ app.controller("SampleCtrl", function($firebaseAuth, $http) {
             id_token: idToken
           }
         }).then(function(response){
+//self.secretData = "Our Dates!!! You got it!!! Great work Chris Stanton!!!"
           self.secretData = response.data;
+
         });
       });//end of firebaseUser()
     } else {
       console.log('Not logged in or not authorized.');
-      self.secretData = [];
+      self.userIsLoggedIn = false;
     }
   });//end of auth.$onAuthStateChanged()
+
 
 //This code runs when the user logs out
   self.logOut = function(){
