@@ -1,8 +1,30 @@
 
 # Google AUTH 2.0 With SQL Authorization
-AngularFire with token authentication on Node backend server. This branch uses the pg node module with a postgres database to show an authorization example.
 
-## Get Started with nodeFire
+---
+
+## Description:
+#### AngularFire with token authentication on Node backend server. This branch uses the pg node module with a postgres database to show an authorization example.  This Boilerplate contains the use of Angular.js
+
+###### Logged Out View:
+<img src="./public/assets/images/screenshots/loggedOut.png" width="50%">
+
+###### Logged In View:
+<img src="./public/assets/images/screenshots/loggedIn.png" width="50%">
+
+---
+
+## Technologies Used:
+1. HTML5
+2. CSS3
+4. Javascript
+5. Body-Parser
+6. express
+7. Firebase (Google)
+
+---
+
+## Get Started with nodeFire:
 1. Run these commands to add the project locally:
   ```
   $ git clone repo or download zip file
