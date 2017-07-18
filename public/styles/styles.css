@@ -5,7 +5,7 @@
 ///////////////////////////*/
 
 #loginCeditials {
-  margin-top: 200px;
+  margin-top: 40px;
   text-align: center;
   display: ;
 }
@@ -18,8 +18,24 @@
 
 .logoutHeading {
   text-align: center;
+  margin-top: 150px;
 }
 
+.buttonDiv {
+  margin-top: 60px;
+  text-align: center;
+}
+
+button {
+  text-align: center;
+  border-radius: 20px;
+  background-color: #2309fa;
+  color: white;
+  font-size: 20px;
+  width: 400px;
+  height: 100px;
+  outline: none;
+}
 
 
 

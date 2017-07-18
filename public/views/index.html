@@ -20,18 +20,23 @@
 
     <!-- shows when logged out -->
     <div ng-show="sc.userIsLoggedIn == false">
-      <button ng-click="sc.logIn()"> Login </button>
-        <h1 class="logoutHeading"> Hi! Login to view this page </h1>
+      <h1 class="logoutHeading"> Login To Be Authenticated! </h1>
+        <div class="buttonDiv">
+          <button ng-click="sc.logIn()"> Login </button>
+        </div>
+
     </div>
 
     <!-- shows when logged in -->
     <div ng-show="sc.userIsLoggedIn == true">
-      <button ng-click="sc.logOut()"> Logout </button>
-        <div id="loginCeditials">
-          <img id="authPhoto" ng-src="{{sc.photo}}">
-            <h2> User Name: {{sc.displayName}} </h2>
-              <h3> User Email: {{sc.email}} </h3>
-        </div>
+      <div id="loginCeditials">
+        <img id="authPhoto" ng-src="{{sc.photo}}">
+          <h2> User Name: {{sc.displayName}} </h2>
+            <h3> User Email: {{sc.email}} </h3>
+      </div>
+      <div class="buttonDiv">
+        <button ng-click="sc.logOut()"> Logout </button>
+      </div>
       <div>
     <!-- Main content container -->
 

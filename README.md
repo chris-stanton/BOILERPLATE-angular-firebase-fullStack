@@ -1,3 +1,4 @@
+
 # Google AUTH 2.0 With SQL Authorization
 AngularFire with token authentication on Node backend server. This branch uses the pg node module with a postgres database to show an authorization example.
 
